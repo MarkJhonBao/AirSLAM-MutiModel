@@ -168,54 +168,6 @@ roslaunch air_slam reloc_euroc.launch
 }
 ```
 
-<h1 align="center">AirSLAM: An Efficient and Illumination-Robust Point-Line Visual SLAM System</h1>
-
-<p align="center"><strong>
-    <a href = "https://scholar.google.com/citations?user=-p7HvCMAAAAJ&hl=zh-CN">Kuan Xu</a><sup>1</sup>,
-    <a href = "https://github.com/yuefanhao">Yuefan Hao</a><sup>2</sup>,
-    <a href = "https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en">Shenghai Yuan</a><sup>1</sup>,
-    <a href = "https://sairlab.org/team/chenw/">Chen Wang</a><sup>2</sup>,
-    <a href = "https://scholar.google.com.sg/citations?user=Fmrv3J8AAAAJ&hl=en">Lihua Xie</a><sup>1</sup>
-</strong></p>
-
-<p align="center"><strong>
-    <a href = "https://www.ntu.edu.sg/cartin">1: Centre for Advanced Robotics Technology Innovation (CARTIN), Nanyang Technological University</a><br>
-    <a href = "https://sairlab.org/">2: Spatial AI & Robotics (SAIR) Lab, Computer Science and Engineering, University at Buffalo</a><br>
-</strong></p>
-
-<p align="center"><strong> 
-    <a href = "https://arxiv.org/pdf/2408.03520">&#128196; [PDF]</a> | 
-    <a href = "https://xukuanhit.github.io/airslam/">&#128190; [Project Site]</a> |
-    <a href = "https://youtu.be/5OcR5KeO5nc">&#127909; [Youtube]</a> |
-    <a href = "https://www.bilibili.com/video/BV1rJY7efE9x">&#127909; [Bilibili]</a>
-    <!-- &#128214; [OpenAccess] -->
-</strong></p>
-
-### Accepted to IEEE Transactions on Robotics (TRO), 2025
-
-### :scroll: AirSLAM has dual-mode (V-SLAM, VI-SLAM), upgraded from [AirVO (IROS'23)](https://github.com/sair-lab/AirSLAM/releases/tag/1.0)
-
-<p align="middle">
-  <img src="figures/system_arch.jpg" width="600" />
-</p>
-
-**AirSLAM** is an efficient visual SLAM system designed to tackle both short-term and long-term illumination
-challenges. Our system adopts a hybrid approach that combines deep learning techniques for feature detection and matching with traditional backend optimization methods. Specifically, we propose a unified convolutional neural network (CNN) that simultaneously extracts keypoints and structural lines. These features are then associated, matched, triangulated, and optimized in a coupled manner. Additionally, we introduce a lightweight relocalization pipeline that reuses the built map, where keypoints, lines, and a structure graph are used to match the query frame with the map. To enhance the applicability of the proposed system to real-world robots, we deploy and accelerate the feature detection and matching networks using C++ and NVIDIA TensorRT. Extensive experiments conducted on various datasets demonstrate that our system outperforms other state-of-the-art visual SLAM systems in illumination-challenging environments. Efficiency evaluations show that our system can run at a rate of 73Hz on a PC and 40Hz on an embedded platform.
-
-**Video**
-<p align="middle">
-<a href="https://youtu.be/5OcR5KeO5nc" target="_blank"><img src="figures/title.JPG" width="600" border="10"/></a>
-</p>
-
-
-## :eyes: Updates
-* [2025.01] The paper [AirSLAM](https://arxiv.org/pdf/2408.03520) was officially accepted to IEEE Transactions on Robotics (TRO).
-* [2025.01] We release the training code for PLNet. The Python code for PLNet can now be found [here](https://github.com/sair-lab/PLNet).
-* [2024.08] We release the code and paper for AirSLAM.
-* [2023.07] AriVO is accepted by IROS 2023.
-* [2022.10] We release the code and paper for AirVO. The code for AirVO can now be found [here](https://github.com/sair-lab/AirSLAM/tree/airvo_iros).
-
-
 ## :checkered_flag: Test Environment
 ### Dependencies
 * OpenCV 4.2
